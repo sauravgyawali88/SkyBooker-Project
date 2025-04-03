@@ -14,5 +14,11 @@ namespace SkyBooker_Project.Models
         public string Password { get; set; }  // Password for the user
         public int FrequentFlyerPoints { get; set; }  // Points the user has accumulated
         public string PreferredAirline { get; set; }  // The user's preferred airline
+
+        // Override ToString method to return user details as a string 
+        public override string ToString()
+        {
+            return $"UserID: {UserID}, UserName: {UserName}, Email: {Email}, FrequentFlyerPoints: {FrequentFlyerPoints}, PreferredAirline: {PreferredAirline}";
+        }
     }
 }
