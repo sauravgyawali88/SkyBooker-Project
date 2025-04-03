@@ -14,5 +14,8 @@ namespace SkyBooker_Project.Models
         public string Airline { get; set; }  // Airline name
         public decimal Price { get; set; }  // Price of the flight ticket
         public int AvailableSeats { get; set; }  // Number of available seats for booking
+
+        public TimeSpan FlightDuration => ArrivalDate - DepartureDate;  // Calculates the duration of the flight
+
     }
 }

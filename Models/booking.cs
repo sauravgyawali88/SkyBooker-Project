@@ -18,5 +18,10 @@ namespace SkyBooker_Project.Models
         // Navigation properties to link to the User and Flight models
         public User User { get; set; }  // The user who made the booking
         public Flight Flight { get; set; }  // The flight that was booked
+
+        public string BookingStatus => PaymentStatus ? "Completed" : "Pending";  // Returns the booking status based on payment status
+
     }
 }
+
+

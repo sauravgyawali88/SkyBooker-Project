@@ -18,7 +18,9 @@ public class Project
 
 	public List<Tag> Tags { get; set; } = [];
 
-	public override string ToString() => $"{Name}";
+    public int TaskCount => Tasks.Count;  // Returns the number of tasks associated with the project
+
+    public override string ToString() => $"{Name}";
 }
 
 public class ProjectsJson
