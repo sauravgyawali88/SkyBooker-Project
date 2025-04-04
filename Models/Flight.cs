@@ -17,5 +17,28 @@ namespace SkyBooker_Project.Models
 
         public TimeSpan FlightDuration => ArrivalDate - DepartureDate;  // Calculates the duration of the flight
 
+        // Method to check if the flight has available seats
+        public bool HasAvailableSeats()
+        {
+            return AvailableSeats > 0;
+        }
+
+        // Method to get a brief summary of the flight
+        public string GetFlightSummary()
+        {
+            return $"Flight {FlightID} operated by {Airline} from {DepartureDate} to {ArrivalDate}, Price: {Price:C}, Available Seats: {AvailableSeats}.";
+        }
+
+        // Method to calculate the price based on available seats (for example, dynamic pricing based on availability)
+        public decimal GetDynamicPrice()
+        {
+            // Example of dynamic pricing: if less than 10 seats are available, increase the price by 10%
+            if (AvailableSeats < 10)
+            {
+                return Price * 1.10m;  // Increase price by 10% if less than 10 seats
+            }
+            return Price;
+        }
+
     }
 }
