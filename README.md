@@ -73,5 +73,5 @@ Usage of Git and GitHub on the SkyBooker project actually assisted me in develop
 
 Each commit I made came with simple and descriptive messages, so it is easier to discern what has been altered and why. It was much easier to debug problems and monitor progress. Though I've done the project solo, Git allowed me to simulate how a team-oriented development would be like by practicing extensively in branching and merging.
 
-Overall, using version control tools like Git made my project more efficient overall. It made me see how important clean commit history, tidy branches, and good documentation are—skills that a commercial software developer should possess.
+Overall, using version control tools like Git made my project more efficient overall. It made me see how important clean commit history, tidy branches, and good documentation are skills that a commercial software developer should possess.
 
