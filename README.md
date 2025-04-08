@@ -68,6 +68,20 @@ Version control using **Git** was implemented throughout this project. Here’s 
 - **Documentation:**  
   GitHub served as the central platform to store project history, track progress, and maintain transparency in development.
 
+  ## 👥 Team Members & Contributions
+
+- **Saurav Gyawali**  
+  - Implemented `TaskCount` property in the Project model  
+  - Added `FlightDuration` in the Flight model  
+  - Contributed to Git branching, commits, and merging  
+  - Worked on the models user, booking, flight
+
+- **Ujjwal**
+  - Worked on the models airpot and payment. 
+  - Assisted with UI design and debugging
+  - Implement Payment Model, ViewModel, and View in MVVM architecture for payment processing.
+  - Contributed to testing and refining feature branches  
+
 # Reflective Analysis
 Usage of Git and GitHub on the SkyBooker project actually assisted me in developing my development planning and management. With the help of Git, I was able to get my code changes traceable in detail and managed. I utilized different branches for feature development like the TaskCount on the Project model, the ToString() feature on the User model, and the FlightDuration feature on the Flight model. With this, I was able to develop each feature without affecting the overall application.
 
