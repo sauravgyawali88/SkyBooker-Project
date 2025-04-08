@@ -35,7 +35,7 @@ SkyBooker is a mobile application developed to simplify flight bookings by offer
 - Practice modular, scalable, and maintainable coding patterns.
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 - **Language:** C#
 - **Backend (optional):** Firebase
@@ -43,7 +43,7 @@ SkyBooker is a mobile application developed to simplify flight bookings by offer
 
 ---
 
-## 🔧 Features Implemented
+##  Features Implemented
 
 - `TaskCount` property in the **Project** model to return the number of tasks associated with a project.
 - Overridden `ToString()` method in the **User** model to display user details in a formatted string.
