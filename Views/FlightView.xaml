@@ -1,35 +1,18 @@
-<Window x:Class="SkyBooker_Project.Views.FlightView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:SkyBooker_Project.Views"
-        Title="Flight Booking" Height="400" Width="600">
-    
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:SkyBooker_Project.Components"
+             xmlns:viewmodels="clr-namespace:SkyBooker_Project.ViewModels"
+             x:Class="SkyBooker_Project.Views.FlightsPage">
 
-        <!-- Title -->
-        <TextBlock Text="Available Flights" FontSize="20" FontWeight="Bold" Grid.Row="0" Margin="5"/>
+    <ContentPage.BindingContext>
+        <viewmodels:FlightViewModel />
+    </ContentPage.BindingContext>
 
-        <!-- Flight ListView to show flights -->
-        <ListView Name="FlightsListView" Grid.Row="1" ItemsSource="{Binding Flights}" SelectedItem="{Binding SelectedFlight}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Flight ID" DisplayMemberBinding="{Binding FlightID}" />
-                    <GridViewColumn Header="Airline" DisplayMemberBinding="{Binding Airline}" />
-                    <GridViewColumn Header="Departure" DisplayMemberBinding="{Binding DepartureDate}" />
-                    <GridViewColumn Header="Arrival" DisplayMemberBinding="{Binding ArrivalDate}" />
-                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" />
-                    <GridViewColumn Header="Available Seats" DisplayMemberBinding="{Binding AvailableSeats}" />
-                </GridView>
-            </ListView.View>
-        </ListView>
+    <VerticalStackLayout>
+        <Button Text="Load Flights"
+                Command="{Binding LoadFlightsCommand}" />
 
-        <!-- Book Flight Button -->
-        <Button Content="Book Flight" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" 
-                Command="{Binding BookFlightCommand}" Margin="5"/>
-    </Grid>
-</Window>
+        <!-- Using your custom component -->
+        <components:FlightListComponent Flights="{Binding Flights}" />
+    </VerticalStackLayout>
+</ContentPage>
