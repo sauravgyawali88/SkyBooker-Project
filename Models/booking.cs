@@ -21,7 +21,17 @@ namespace SkyBooker_Project.Models
 
         public string BookingStatus => PaymentStatus ? "Completed" : "Pending";  // Returns the booking status based on payment status
   
-        Added business logic methods to Booking model: refund eligibility, cancellation, discount calculation, and summary generator
+        public bool IsRefundEligible() => !PaymentStatus && (DateTime.Now - BookingDate).TotalHours < 24;
+
+public void CancelBooking()
+{
+    PaymentStatus = false;
+    // Additional cancellation logic here (e.g., notify user, update seat availability)
+}
+
+public decimal CalculateDiscount(decimal discountRate) => TotalAmount * (1 - discountRate);
+
+public string GetSummary() => $"Booking {BookingID} for Flight {FlightID} - Status: {BookingStatus}";
 
     }
 }
