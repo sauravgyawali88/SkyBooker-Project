@@ -20,6 +20,8 @@ namespace SkyBooker_Project.Models
         public Flight Flight { get; set; }  // The flight that was booked
 
         public string BookingStatus => PaymentStatus ? "Completed" : "Pending";  // Returns the booking status based on payment status
+  
+        Added business logic methods to Booking model: refund eligibility, cancellation, discount calculation, and summary generator
 
     }
 }
